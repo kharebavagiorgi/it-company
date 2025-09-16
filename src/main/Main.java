@@ -63,6 +63,8 @@ public class Main {
             itCompany.addProject(smallProject);
         } catch (ProjectCreationException e) {
             System.err.println("\nCaught checked exception: " + e.getMessage());
+        }finally {
+            System.out.println("Finally block executed...");
         }
 
         devDept.addEmployee(developer1);
