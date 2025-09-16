@@ -8,7 +8,6 @@ import java.util.Arrays;
 
 public class ITCompany {
 
-    private final String companyName;
     private static int totalEmployees;
 
     static {
@@ -16,6 +15,7 @@ public class ITCompany {
         totalEmployees = 0;
     }
 
+    private final String name;
     private final Long companyId;
     private final LocalDate foundationDate;
     private Department[] departments;
@@ -23,8 +23,8 @@ public class ITCompany {
     private int departmentCount;
     private int projectCount;
 
-    public ITCompany(String companyName, long companyId, LocalDate foundationDate) {
-        this.companyName = companyName;
+    public ITCompany(String name, long companyId, LocalDate foundationDate) {
+        this.name = name;
         this.companyId = companyId;
         this.foundationDate = foundationDate;
         this.departments = new Department[5];
@@ -49,7 +49,7 @@ public class ITCompany {
     }
 
     public String getCompanyName() {
-        return this.companyName;
+        return this.name;
     }
 
     public static int getTotalEmployees() {
