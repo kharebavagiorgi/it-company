@@ -1,5 +1,7 @@
 package com.solvd.itcompany.company;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import com.solvd.itcompany.department.Department;
 import com.solvd.itcompany.exception.ProjectCreationException;
 import com.solvd.itcompany.project.*;
@@ -8,10 +10,11 @@ import java.util.*;
 
 public class ITCompany {
 
+    private static final Logger LOGGER = LogManager.getLogger(ITCompany.class);
     private static int totalEmployees;
 
     static {
-        System.out.println("2/5 Remote Days(From static block)");
+        LOGGER.info("2/5 Remote Days(From static block)");
         totalEmployees = 0;
     }
 
